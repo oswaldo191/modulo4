@@ -37,7 +37,7 @@
                  </button>
               </td>
               <td>
-                 <button class="btn btn-primary">
+                 <button class="btn btn-primary" data-toggle="modal" data-target="#lista-estudiante{{ $asignaturas->id }}">
                      Ver estudiantes
                  </button>
               </td>
@@ -48,6 +48,11 @@
 </div>
 @foreach($asignatura as $asignaturas)
  @include('recurso.edit-asignatura')
+@endforeach
+
+
+@foreach($asignatura as $asignaturas)
+     @include('recurso.list-estudiante')
 @endforeach
 
  @include('recurso.crear-asignatura')

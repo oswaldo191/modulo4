@@ -30,15 +30,15 @@ class HomeController extends Controller
     public function index()
     {
 
-        if (auth()->user()->tipouser_id == 1) {
+        //if (auth()->user()->tipouser_id == 1) {
              $asignatura = Asignatura::all();
 
             $profesor = Profesor::all();
 
             return view('home', compact('asignatura','profesor'));
-        }
+       // }
 
-        return 'Loco que haces aqui no tienes permiso';
+       // return 'Loco que haces aqui no tienes permiso';
     }
 
     public function addasig(Request $request)
